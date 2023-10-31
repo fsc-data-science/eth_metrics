@@ -1,0 +1,1 @@
+<h2>Price Page</h2>
