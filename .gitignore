@@ -1,3 +1,6 @@
+data/
+*.R
+
 # Logs
 logs
 *.log
