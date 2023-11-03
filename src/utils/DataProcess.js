@@ -14,11 +14,11 @@ export async function fetchData(path) {
             throw new Error('Network response was not ok');
         }
         let data = await response.json();
-        console.log(data.length)
+        
         // Unboxing: If data is an array with only one item, return that item
         if (Array.isArray(data) && data.length === 1) {
             data = data[0];
-            console.log(data)
+            
         }
 
         return data;
@@ -31,5 +31,7 @@ export async function fetchData(path) {
 // Process the data for the Ecosystem cards
 export async function processEcosystemCards() {
     const txStatsData = await fetchData(TX_STATS_PATH);
-    console.log(txStatsData);
+    // will need to insert forecast here as 9th card 
+
+    return txStatsData;
 }

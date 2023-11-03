@@ -1,11 +1,10 @@
+<!-- Card.svelte -->
 <script>
-    export let category;
-    export let name;
-    export let number;
+    export let name = "";
+    export let value = "";
 </script>
 
 <div class="card">
-    <h2>{category}</h2>
-    <p>{name}</p>
-    <p>{number}</p>
+    <h4>{name}</h4>
+    <p>{value}</p>
 </div>
