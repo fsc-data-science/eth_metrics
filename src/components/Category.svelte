@@ -7,13 +7,13 @@
 </script>
 
 <style>
-    .category {
+    div {
         display: flex;
-        flex-direction: column; /* default to vertical layout */
+        flex-direction: column;
     }
-    @media (max-width: 768px) { /* adjust breakpoint as needed */
-        .category {
-            flex-direction: row; /* change to horizontal layout for smaller screens */
+    @media (max-width: 768px) {
+        div {
+            flex-direction: row;
         }
     }
 </style>

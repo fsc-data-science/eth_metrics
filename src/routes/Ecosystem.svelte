@@ -54,10 +54,12 @@
 
 <h2>Ecosystem Page</h2>
 
-{#if cardsData}
+<div class = 'central_layout'>
+    {#if cardsData}
     {#each categories as category}
-        <Category categoryLabel={category.label} names_array={category.names} values_array={category.values} />
+    <Category categoryLabel={category.label} names_array={category.names} values_array={category.values} />
     {/each}
-{:else}
+    {:else}
     <p>Loading...</p>
-{/if}
+    {/if}
+</div>

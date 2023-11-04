@@ -117,3 +117,17 @@ transition: background-color 0.2s;
 nav a:hover {
 background-color: rgba(255,255,255,0.1);
 }
+
+    /* Default styles: Categories side by side, cards vertical */
+.central_layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+
+    /* For smaller screens: Categories vertical, cards side by side */
+    @media (max-width: 768px) {
+    .central_layout > div {
+        flex-direction: row;
+    }
+    }
