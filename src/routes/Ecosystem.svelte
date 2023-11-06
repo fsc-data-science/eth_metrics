@@ -33,12 +33,12 @@
             label: "ETH Price",
             names: ["Low", "High", "24 Hr Forecast"],
             // put forecast here 
-            values: [cardsData?.MONTH_LOW_PRICE, cardsData?.MONTH_HIGH_PRICE, 1000]
+            values: [cardsData?.MONTH_LOW_PRICE, cardsData?.MONTH_HIGH_PRICE, 'TBD']
         
         },
         {
             label: "DEX",
-            names: ["# Swap Tx", "Total Swap Volume ($USD)", "Uniswap Dominance"],
+            names: ["# Swap Tx", "Swap Volume ($USD)", "Uniswap Dominance"],
             values: [cardsData?.TOTAL_SWAP_TX, cardsData?.TOTAL_USD_SWAP_VOLUME, cardsData?.TOTAL_UNISWAP_DOMINANCE]
         
         },
