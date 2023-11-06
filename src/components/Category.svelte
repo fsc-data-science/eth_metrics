@@ -7,6 +7,9 @@
 </script>
 
 <style>
+    h3 {
+    text-align: center; 
+    }
     div {
         display: flex;
         flex-direction: column;

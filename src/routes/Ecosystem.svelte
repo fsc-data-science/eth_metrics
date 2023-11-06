@@ -1,7 +1,6 @@
 <script>
     import Category from '../components/Category.svelte';
     import { processEcosystemCards } from '../utils/DataProcess.js';
-
     let cardsData = null; 
     let categories = [];
 
@@ -31,14 +30,14 @@
         },
         {
             label: "ETH Price",
-            names: ["Low", "High", "24 Hr Forecast"],
+            names: ["Low (USD)", "High (USD)", "24 Hr Forecast"],
             // put forecast here 
-            values: [cardsData?.MONTH_LOW_PRICE, cardsData?.MONTH_HIGH_PRICE, 'TBD']
+            values: [+ cardsData?.MONTH_LOW_PRICE, + cardsData?.MONTH_HIGH_PRICE, 'TBD']
         
         },
         {
             label: "DEX",
-            names: ["# Swap Tx", "Swap Volume ($USD)", "Uniswap Dominance"],
+            names: ["# Swap Tx", "Swap Volume (USD)", "Uniswap Dominance"],
             values: [cardsData?.TOTAL_SWAP_TX, cardsData?.TOTAL_USD_SWAP_VOLUME, cardsData?.TOTAL_UNISWAP_DOMINANCE]
         
         },

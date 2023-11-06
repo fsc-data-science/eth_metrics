@@ -123,6 +123,7 @@ background-color: rgba(255,255,255,0.1);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+	margin: 0% 10%;
     }
 
     /* For smaller screens: Categories vertical, cards side by side */
