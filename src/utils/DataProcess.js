@@ -1,8 +1,28 @@
 // File: DataProcess.js
 
+export function uppercaseKeys(data) {
+    if (typeof data === 'string') {
+    return data;
+} else if (typeof data === 'object' && data !== null) {
+    if (Array.isArray(data)) {
+    return data.map(uppercaseKeys);
+    } else {
+    const newObject = {};
+    for (const key in data) {
+        newObject[key.toUpperCase()] = uppercaseKeys(data[key]);
+    }
+    return newObject;
+    }
+} else {
+    return data;
+}
+}
+
 // Define the path for the ecosystem_cards
-// reads from public
+// reads from local 
 const TX_STATS_PATH = 'test-data/ecosystem_17_cards.json';
+// production 
+// const TX_STATS_PATH = process.env.TX_STATS_PATH;
 
 // Fetch function to load the JSON file
 export async function fetchData(path) {

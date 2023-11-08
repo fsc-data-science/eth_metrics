@@ -1,11 +1,12 @@
 <script>
     import Category from '../components/Category.svelte';
-    import { processEcosystemCards } from '../utils/DataProcess.js';
+    import { uppercaseKeys, processEcosystemCards } from '../utils/DataProcess.js';
     let cardsData = null; 
     let categories = [];
 
     processEcosystemCards().then(data => {
         cardsData = data;  
+        cardsData = uppercaseKeys(cardsData);
         console.log(cardsData);
     });
 
