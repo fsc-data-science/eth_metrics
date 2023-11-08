@@ -26,7 +26,7 @@ const TX_STATS_PATH = 'test-data/ecosystem_17_cards.json';
 
 // Fetch function to load the JSON file
 export async function fetchData(path) {
-    console.log(path)
+    //console.log(path)
         try {
         const response = await fetch(path);
         

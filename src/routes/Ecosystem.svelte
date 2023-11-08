@@ -7,7 +7,7 @@
     processEcosystemCards().then(data => {
         cardsData = data;  
         cardsData = uppercaseKeys(cardsData);
-        console.log(cardsData);
+       // console.log(cardsData);
     });
 
     $: if (cardsData) {
