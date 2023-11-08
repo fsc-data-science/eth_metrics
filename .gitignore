@@ -1,6 +1,6 @@
 data/
 *.R
-
+*/rsconnect/
 # Logs
 logs
 *.log
@@ -154,3 +154,4 @@ npm-debug.log
 yarn-error.log
 .Rproj.user
 .Rhistory
+auto_arima/api_key.txt
