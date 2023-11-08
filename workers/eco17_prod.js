@@ -34,7 +34,6 @@ let CACHE_ID = basicHash(query);
 
 // Try to get the data from the cache first
 const cacheResponse =  await env.CACHE.get(CACHE_ID);
-const backupCache = await env.CACHE.get('backup_' + CACHE_ID);
 if (cacheResponse) {
     // If we have a cached response, parse it as we stored it as a string.
     data = JSON.parse(cacheResponse);
@@ -60,8 +59,6 @@ if (cacheResponse) {
     
     // Cache the stringified response with a TTL
         ctx.waitUntil(env.CACHE.put(CACHE_ID, JSON.stringify(data), { expirationTtl: CACHE_TTL }));
-    // cache a backup
-        ctx.waitUntil(env.CACHE.put('backup_'+ CACHE_ID, JSON.stringify(data), { expirationTtl: CACHE_TTL+1 }));
     } else {
     // Handle errors, e.g., by returning a fallback response or re-throwing the error
     throw new Error(`API request failed with status ${response.status}`);
@@ -72,7 +69,11 @@ console.log(JSON.stringify(data));
 
 // Return the response, either from the cache or freshly fetched
 return new Response(JSON.stringify(data), {
-    headers: { 'Content-Type': 'application/json' }
+    headers: {
+'Content-Type': 'application/json',
+'Access-Control-Allow-Origin': '*', // Allow access from all origins
+'Access-Control-Allow-Methods': 'GET', // Allow all HTTP methods
+}
 });
 }
 };

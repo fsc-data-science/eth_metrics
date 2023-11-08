@@ -69,7 +69,11 @@ console.log(JSON.stringify(data));
 
 // Return the response, either from the cache or freshly fetched
 return new Response(JSON.stringify(data), {
-    headers: { 'Content-Type': 'application/json' }
+    headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*', // Allow access from all origins
+        'Access-Control-Allow-Methods': 'GET', // Allow all HTTP methods
+        }
 });
 }
 };
