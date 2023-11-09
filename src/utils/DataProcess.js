@@ -22,7 +22,7 @@ export function uppercaseKeys(data) {
 // reads from local 
 // const TX_STATS_PATH = 'test-data/ecosystem_17_cards.json';
 // production 
-const TX_STATS_PATH = env.TX_STATS_PATH;
+const TX_STATS_PATH = "http://ethmetrics.carlos-mercado.workers.dev";
 
 // Fetch function to load the JSON file
 export async function fetchData(path) {
