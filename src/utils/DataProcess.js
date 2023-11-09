@@ -20,9 +20,9 @@ export function uppercaseKeys(data) {
 
 // Define the path for the ecosystem_cards
 // reads from local 
-const TX_STATS_PATH = 'test-data/ecosystem_17_cards.json';
+// const TX_STATS_PATH = 'test-data/ecosystem_17_cards.json';
 // production 
-// const TX_STATS_PATH = process.env.TX_STATS_PATH;
+const TX_STATS_PATH = process.env.TX_STATS_PATH;
 
 // Fetch function to load the JSON file
 export async function fetchData(path) {
