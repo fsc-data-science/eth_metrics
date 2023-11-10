@@ -26,7 +26,6 @@
 }
 </style>
 
-
 <div class="card">
     <h4>{name}</h4>
     <p>{formattedValue}</p>

@@ -13,13 +13,13 @@
     $: if (cardsData) {
     categories = [
         {
-            label: "Tx",
-            names: ["# TX", "# Failed TX", "% Failed TX"],
-            values: [cardsData?.TOTAL_FACT_TX, cardsData?.TOTAL_FAILED_TX, cardsData?.TOTAL_PERCENT_FAILED_TX]
+            label: "Transactions",
+            names: ["# Tx", "# Failed", "% Failed"],
+            values: [cardsData?.TOTAL_FACT_TX, cardsData?.TOTAL_FAILED_TX, 100*cardsData?.TOTAL_PERCENT_FAILED_TX + "%"]
         },
         {
-            label: "ETH Volume",
-            names: ["# ETH Transfers", "ETH Transfer Volume", "ETH Fees"],
+            label: "Raw Ether",
+            names: ["#Transfers", "Transfer Volume", "Fees Paid"],
             values: [cardsData?.TOTAL_RAW_ETH_TRANSFERS, cardsData?.TOTAL_ETH_TRANSFER_VOLUME, cardsData?.TOTAL_ETH_TX_FEES]
         
         },
@@ -38,8 +38,8 @@
         },
         {
             label: "DEX",
-            names: ["# Swap Tx", "Swap Volume (USD)", "Uniswap Dominance"],
-            values: [cardsData?.TOTAL_SWAP_TX, cardsData?.TOTAL_USD_SWAP_VOLUME, cardsData?.TOTAL_UNISWAP_DOMINANCE]
+            names: ["# Swap Tx", "Volume (Billion USD)", "Uniswap %"],
+            values: [cardsData?.TOTAL_SWAP_TX, cardsData?.TOTAL_USD_SWAP_VOLUME/1e9, 100*cardsData?.TOTAL_UNISWAP_DOMINANCE]
         
         },
         {

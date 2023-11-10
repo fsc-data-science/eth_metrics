@@ -1,1 +1,1 @@
-<h2>Transactions Page</h2>
+<h2>Coming Soon</h2>
