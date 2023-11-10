@@ -7,19 +7,16 @@
 </script>
 
 <style>
-    h3 {
-    text-align: center; 
-    }
-    div {
-        display: flex;
-        flex-direction: column;
-    }
-    @media (max-width: 768px) {
-        div {
-            flex-direction: row;
-        }
-    }
+h3 {
+    text-align: center;
+}
+div {
+    display: flex;
+    flex-direction: column; /* Always vertical */
+    align-items: center; /* Center cards within the category */
+}
 </style>
+
 
 <div class="category">
     <h3>{categoryLabel}</h3>
