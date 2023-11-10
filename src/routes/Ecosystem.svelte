@@ -53,6 +53,10 @@
 </script>
 
 <div class = 'central_layout'>
+    <p>Key Summary Stats on Ethereum over the last 30 days</p>
+    <p>(Updates 12AM UTC every day)</p>
+</div>
+<div class = 'central_layout'>
     {#if cardsData}
     {#each categories as category}
     <Category categoryLabel={category.label} names_array={category.names} values_array={category.values} />
