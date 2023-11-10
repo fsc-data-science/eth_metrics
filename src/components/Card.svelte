@@ -13,7 +13,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     margin: 0.5rem;
-    min-width: 10rem; /* Adjusted minimum width */
+    min-width: 5rem; /* Adjusted minimum width */
     border-radius: 0.5rem;
     background: linear-gradient(270deg, rgb(231, 231, 231) 1%, #ffffff 100%);
 }

@@ -12,7 +12,7 @@ import NotFound from './routes/NotFound.svelte';
 <Router>
     <nav>
         {#each routes as route}
-            <Link to="{route.path}">{route.name}</Link> | 
+            <Link to="{route.path}">{route.name}</Link> 
         {/each}
     </nav>
 	<Route path="/" component={Ecosystem} /> <!-- This makes Ecosystem the default route -->

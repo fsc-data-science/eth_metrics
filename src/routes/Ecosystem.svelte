@@ -52,8 +52,6 @@
 
 </script>
 
-<h2>Ecosystem Page</h2>
-
 <div class = 'central_layout'>
     {#if cardsData}
     {#each categories as category}
