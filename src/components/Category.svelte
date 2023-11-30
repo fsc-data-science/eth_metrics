@@ -4,6 +4,7 @@
     export let categoryLabel = "";
     export let names_array = [];
     export let values_array = [];
+    export let format_array = [];
 </script>
 
 <style>
@@ -21,6 +22,6 @@ div {
 <div class="category">
     <h3>{categoryLabel}</h3>
     {#each names_array as name, index}
-        <Card name={name} value={values_array[index]} />
+        <Card name={name} value={values_array[index]} format = {format_array[index]} />
     {/each}
 </div>
