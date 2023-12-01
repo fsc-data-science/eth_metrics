@@ -25,7 +25,7 @@
             chart: {
                 type: 'scatter',
                 zoomType: 'xy', // Enable box-style zoom
-                zoomFactor: 999, // Adjust this value to control zoom sensitivity
+                zoomFactor: 100, // Adjust this value to control zoom sensitivity
             },
             title: {
                 text: title,
@@ -79,7 +79,7 @@
 
 <style>
     #chart-container {
-        width: 60%;
-        height: 250px; /* Adjust the height as needed */
+        width: 30%;
+        height: 30%; /* Adjust the height as needed */
     }
 </style>
